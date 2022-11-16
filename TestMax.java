@@ -22,10 +22,16 @@ public class TestMax<E extends Comparable <E>> {
 		if (z.compareTo(max)>0) {
 			max = z;
 		}
-		System.out.printf("Max of %s, %s and %s is %s\n",x, y, z, max);
+		printMax(x,y,z, max);
+		
 		return max;
 	}
 	
+	private static <E> void printMax(E x, E y, E z, E max) {
+		System.out.printf("Max of %s, %s and %s is %s\n",x, y, z, max);
+		
+	}
+
 	public static void main(String[] args) {
 		Integer xInt = 7, yInt = 9, zInt = 4;
 		new TestMax(xInt, yInt, zInt).maximum();
